@@ -43,6 +43,7 @@ public class Multilevelcarparkingsolution {
         public static void multilevelparking ( int x, int y){
             HashMap<Integer, String> s = new HashMap<Integer, String>();
             Scanner sc = new Scanner(System.in);
+            int constant = x*y;
             int k = 1;
             Display_comands();
             k = sc.nextInt();
@@ -52,7 +53,7 @@ public class Multilevelcarparkingsolution {
                         int pos = Takeintinp("Enter postition to be inserted int");
                         String colour = Takestrinp("Enter colour of car");
 
-                        if (s.size()-1 <= x * y) {
+                        if (s.size()-1 <= constant&& s.get(pos) == null) {
                             s.put(pos, colour);
                             System.out.println("Your car is parked");
                         } else {
